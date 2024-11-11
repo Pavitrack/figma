@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+}
+
+.speakers-section {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.speakers-section__title {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.speakers-section__description {
+    font-size: 1em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.speakers-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px;
+    margin-bottom: 30px;
+    scroll-snap-type: x mandatory;
+    justify-content: center; 
+}
+
+.speaker-card {
+    width: 180px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex-shrink: 0;
+    cursor: pointer;
+    scroll-snap-align: center;
+}
+
+.speaker-card__image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.speaker-card__name {
+    font-size: 1.1em;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.speaker-card__title,
+.speaker-card__company {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.program-button {
+    padding: 12px 24px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #0073e6;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; 
+}
+
+.program-button:hover {
+    background-color: #005bb5;
+}
+
+@media (max-width: 768px) {
+    .speakers-slider {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .speaker-card {
+        width: 100%; 
+    }
+}
+
+@media (min-width: 769px) {
+    .speakers-slider {
+        flex-direction: row;
+    }
+
+    .speaker-card {
+        width: 180px; 
+    }
+}
+
+
+
